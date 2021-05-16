@@ -1,0 +1,166 @@
+@import "variables";
+
+.dashboardAccount {
+    border-radius: 10px;
+    box-shadow: 0 3px 6px 0 $black16-color;
+    background-color: $white-color;
+    padding: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: start;
+    margin-top: 30px;
+    .accountProfile{
+      width: 106px;
+      height: 106px;
+      position: relative;
+      border-radius: 10px;
+      >img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+      i.edit {
+        position: absolute;
+        top: -12px;
+        right: -12px;
+        width: 30px;
+        height: 30px;
+        background: $white-color;
+        border-radius: 50%;
+        cursor: pointer;
+        img{
+          width: 16px;
+          margin: 7px auto;
+          display: block;
+        }
+      }
+    }
+    .accountForm{
+        width:calc(100% - 150px);
+        padding-right: 7%;
+        .form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .formGroup {
+                width: calc((100% - 20px) / 2);
+                margin-top: 20px;
+                margin-bottom: 0;
+                input, select, .ant-select-selector{
+                    background:$light-white-color;
+                    padding: 14px 14px;
+                    border-radius: 10px;
+                    border:0;
+                    outline: none;
+                    width: 100%;
+                    height: auto;
+                    box-shadow: none;
+                }
+                .ant-select-selector{
+                    background: url(../../images/selectIcon.svg) no-repeat right $light-white-color;
+                    -webkit-appearance: none;
+                    background-position-x: 96%;
+                    padding: 10px 14px;
+                }
+                span.ant-select-arrow{
+                    display: none;
+                }
+                button{
+                    border-radius: 6px;
+                    background-color: $grape-purple-color;
+                    color: $white-color;
+                    border: 0;
+                    width: 141px;
+                    padding: 11px 14px;
+                    text-align: center;
+                    margin-right: 20px;
+                    cursor: pointer;
+                    border: 1px solid $grape-purple-color;
+                    transition: 200ms ease-in-out;
+                    &:hover{
+                    background-color: transparent;
+                    color: $grape-purple-color;
+                    }
+                }
+                button.cancel{
+                    background: $black06-color;
+                    border-color: $gray-color;
+                    &:hover{
+                    background-color: transparent;
+                    color: $grape-purple-color;
+                    }
+                }
+            }
+            .fullwidth{
+                width: 100%;
+                input{
+                    width: calc(50% - 10px);
+                }
+            }
+            .changePasswordBtn {
+                width: 100%;
+                text-align: right;
+                margin-top: 8px;
+                button{
+                    color: $dull-orange-color;
+                    padding: 0;
+                    border: 0;
+                    span{
+                        text-decoration: underline;
+                    }
+                    &:hover{
+                        color: $grape-purple-color;
+                    }
+                }
+            }
+        }
+        .accountInfo{
+            margin-top: 62px;
+            width: 100%;
+        }
+    }
+  }
+
+
+@media screen and (max-width:767px){
+
+.dashboardAccount {
+    justify-content: center;
+    padding: 40px 20px;
+    .accountProfile {
+        margin-bottom: 30px;
+    }
+    .accountForm {
+        width: 100%;
+        padding-right: 0;
+        .form{
+            .formGroup {
+                width: 100%;
+                button{
+                    width: 130px;
+                    margin-right: 10px;
+                }
+            }
+            .fullwidth{
+                width: 100%;
+                input{
+                    width: 100%;
+                }
+            }
+            .formButton{
+                margin-top: 36px;
+            }
+        }
+        .accountInfo {
+            margin-top: 45px;
+        }
+    }   
+}
+
+
+}
